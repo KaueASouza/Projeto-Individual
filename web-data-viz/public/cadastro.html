@@ -142,13 +142,13 @@
     var emailVar = email_input.value;
     var senhaVar = senha_input.value;
     var confirmacaoSenhaVar = confirmacao_senha_input.value;
-    var marcaVar = select_marca.value;
+    var fkmarcaVar = select_marca.value;
     if (
       nomeVar == "" ||
       emailVar == "" ||
       senhaVar == "" ||
       confirmacaoSenhaVar == "" ||
-      marcaVar ==  ""
+      fkmarcaVar ==  ""
     ) {
       cardErro.style.display = "block";
       mensagem_erro.innerHTML =
@@ -172,7 +172,7 @@
         nomeServer: nomeVar,
         emailServer: emailVar,
         senhaServer: senhaVar,
-        marcaServer: marcaVar
+        fkmarcaServer: fkmarcaVar
       }),
     })
       .then(function (resposta) {
