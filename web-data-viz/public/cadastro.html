@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>AquaTech | Cadastro</title>
+  <title>Sobre Rodas | Cadastro</title>
 
   <script src="./js/sessao.js"></script>
 
@@ -75,36 +75,36 @@
           </div>
           <div class="campo">
             <span>Selecione a marca da sua moto: </span>
-            <select>
+            <select id="select_marca">
               <option value="#">Selecione</option>
-              <option value="avelloz">Avelloz</option>
-              <option value="bmw">BMW</option>
-              <option value="dafra">Dafra</option>
-              <option value="ducati">Ducati</option>
-              <option value="haojue">Haojue</option>
-              <option value="harley-davidson">Harley-Davidson</option>
-              <option value="honda">Honda</option>
-              <option value="kawasaki">Kawasaki</option>
-              <option value="ktm">KTM</option>
-              <option value="kymco">Kymco</option>
-              <option value="mxf">MXF</option>
-              <option value="piaggio">Piaggio</option>
-              <option value="pro-tork">Pro Tork</option>
-              <option value="royal-enfield">Royal Enfield</option>
-              <option value="shineray">Shineray</option>
-              <option value="sousa-motos">Sousa Motos</option>
-              <option value="suzuki">Suzuki</option>
-              <option value="triumph">Triumph</option>
-              <option value="voltz-motors">Voltz Motors</option>
-              <option value="yamaha">Yamaha</option>
-              <option value="bajaj">Bajaj</option>
-              <option value="fantic">Fantic</option>
-              <option value="mv-agusta">MV Agusta</option>
-              <option value="zontes">Zontes</option>
-              <option value="mottu">Mottu</option>
-              <option value="watts">Watts</option>
-              <option value="origem">Origem</option>
-              <option value="bull-motors">Bull Motors</option>
+              <option value="1">Avelloz</option>
+              <option value="2">BMW</option>
+              <option value="3">Dafra</option>
+              <option value="4">Ducati</option>
+              <option value="5">Haojue</option>
+              <option value="6">Harley-Davidson</option>
+              <option value="7">Honda</option>
+              <option value="8">Kawasaki</option>
+              <option value="9">KTM</option>
+              <option value="10">Kymco</option>
+              <option value="11">MXF</option>
+              <option value="12">Piaggio</option>
+              <option value="13">Pro Tork</option>
+              <option value="14">Royal Enfield</option>
+              <option value="15">Shineray</option>
+              <option value="16">Sousa Motos</option>
+              <option value="17">Suzuki</option>
+              <option value="18">Triumph</option>
+              <option value="19">Voltz Motors</option>
+              <option value="20">Yamaha</option>
+              <option value="21">Bajaj</option>
+              <option value="22">Fantic</option>
+              <option value="23">MV Agusta</option>
+              <option value="24">Zontes</option>
+              <option value="25">Mottu</option>
+              <option value="26">Watts</option>
+              <option value="27">Origem</option>
+              <option value="28">Bull Motors</option>
               
               
             </select>
@@ -142,12 +142,13 @@
     var emailVar = email_input.value;
     var senhaVar = senha_input.value;
     var confirmacaoSenhaVar = confirmacao_senha_input.value;
-    var empresaVar = listaEmpresas.value
+    var marcaVar = select_marca.value;
     if (
       nomeVar == "" ||
       emailVar == "" ||
       senhaVar == "" ||
-      confirmacaoSenhaVar == ""
+      confirmacaoSenhaVar == "" ||
+      marcaVar ==  ""
     ) {
       cardErro.style.display = "block";
       mensagem_erro.innerHTML =
@@ -171,6 +172,7 @@
         nomeServer: nomeVar,
         emailServer: emailVar,
         senhaServer: senhaVar,
+        marcaServer: marcaVar
       }),
     })
       .then(function (resposta) {
