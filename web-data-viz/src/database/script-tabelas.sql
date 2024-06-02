@@ -1,17 +1,11 @@
--- Arquivo de apoio, caso você queira criar tabelas como as aqui criadas para a API funcionar.
--- Você precisa executar os comandos no banco de dados para criar as tabelas,
--- ter este arquivo aqui não significa que a tabela em seu BD estará como abaixo!
-
-/*
-comandos para mysql server
-*/
-
-CREATE DATABASE aquatech;
-
-USE aquatech;
 
 
-CREATE TABLE marca(
+CREATE DATABASE sobrerodas;
+
+USE sobrerodas;
+
+
+CREATE TABLE marca (
 id INT PRIMARY KEY AUTO_INCREMENT,
 nome varchar(45));
 
@@ -113,3 +107,24 @@ UNION ALL
 SELECT 'Bull Motors' as marca, count(*) as qtd FROM usuario WHERE fkmarca = '28');
 
 select * from usuario;
+
+INSERT INTO usuario VALUES
+(default, 'Kaue' , 'almeidakaue4@gmail.com', '1234' , 7);
+
+INSERT INTO usuario (nome, email, senha, fkmarca) VALUES
+('Alice Santos', 'alice.santos@gmail.com', 'senhaAlice1', 1),
+('Bruno Costa', 'bruno.costa@gmail.com', 'senhaBruno2', 3),
+('Carlos Almeida', 'carlos.almeida@gmail.com', 'senhaCarlos3', 5),
+('Daniela Pereira', 'daniela.pereira@gmail.com', 'senhaDaniela4', 7),
+('Eduardo Silva', 'eduardo.silva@gmail.com', 'senhaEduardo5', 9),
+('Fernanda Oliveira', 'fernanda.oliveira@gmail.com', 'senhaFernanda6', 11),
+('Gabriel Lima', 'gabriel.lima@gmail.com', 'senhaGabriel7', 13),
+('Helena Souza', 'helena.souza@gmail.com', 'senhaHelena8', 15),
+('Igor Ribeiro', 'igor.ribeiro@gmail.com', 'senhaIgor9', 17),
+('Julia Martins', 'julia.martins@gmail.com', 'senhaJulia10', 19),
+('Lucas Mendes', 'lucas.mendes@gmail.com', 'senhaLucas11', 21),
+('Mariana Ferreira', 'mariana.ferreira@gmail.com', 'senhaMariana12', 23),
+('Nicolas Rocha', 'nicolas.rocha@gmail.com', 'senhaNicolas13', 25),
+('Olivia Cardoso', 'olivia.cardoso@gmail.com', 'senhaOlivia14', 27),
+('Pedro Barbosa', 'pedro.barbosa@gmail.com', 'senhaPedro15', 28);
+
