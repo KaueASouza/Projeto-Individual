@@ -215,12 +215,14 @@
         };
 
         let score = 0;
-        const form = new FormData(event.target);
-        form.forEach((value, key) => {
-            if (value === answers[key]) {
-                score++;
+        const form = document.forms['quizForm'];
+
+for (const key in answers) {
+    const userAnswer = form.elements[key].value;
+    if (userAnswer === answers[key]) {
+        score++;
             }
-        });
+        };
 
         alert('Você acertou ' + score + ' de 15 perguntas.');
     });
